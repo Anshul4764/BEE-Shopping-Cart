@@ -1,15 +1,15 @@
 'use strict';
 // 1. Product catalogue: all prices are in Indian rupees.
 const products = [
-  {id:1,name:'Wireless Headphones',category:'Electronics',price:1499,image:'images/headphones.jpg'},
-  {id:2,name:'Everyday Backpack',category:'Fashion',price:999,image:'images/backpack.jpg'},
-  {id:3,name:'Classic Notebook',category:'Stationery',price:199,image:'images/notebook.jpg'},
-  {id:4,name:'Smart Watch',category:'Electronics',price:2499,image:'images/watch.jpg'},
-  {id:5,name:'Everyday Sneakers',category:'Fashion',price:1799,image:'images/sneakers.jpg'},
-  {id:6,name:'Colour Pencil Set',category:'Stationery',price:299,image:'images/pencils.jpg'},
-  {id:7,name:'Portable Speaker',category:'Electronics',price:1299,image:'images/speaker.jpg'},
-  {id:8,name:'Cotton T-Shirt',category:'Fashion',price:599,image:'images/shirt.jpg'},
-  {id:9,name:'Ballpoint Pen',category:'Stationery',price:399,image:'images/pen.jpg'}
+  {id:1,name:'Wireless Headphones',category:'Electronics',price:1499,image:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=640&h=480&fit=crop&fm=jpg'},
+  {id:2,name:'Everyday Backpack',category:'Fashion',price:999,image:'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=640&h=480&fit=crop&fm=jpg'},
+  {id:3,name:'Classic Notebook',category:'Stationery',price:199,image:'https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=640&h=480&fit=crop&fm=jpg'},
+  {id:4,name:'Smart Watch',category:'Electronics',price:2499,image:'https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=640&h=480&fit=crop&fm=jpg'},
+  {id:5,name:'Everyday Sneakers',category:'Fashion',price:1799,image:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=640&h=480&fit=crop&fm=jpg'},
+  {id:6,name:'Colour Pencil Set',category:'Stationery',price:299,image:'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=640&h=480&fit=crop&fm=jpg'},
+  {id:7,name:'Portable Speaker',category:'Electronics',price:1299,image:'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=640&h=480&fit=crop&fm=jpg'},
+  {id:8,name:'Cotton T-Shirt',category:'Fashion',price:599,image:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=640&h=480&fit=crop&fm=jpg'},
+  {id:9,name:'Ballpoint Pen',category:'Stationery',price:399,image:'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=640&h=480&fit=crop&fm=jpg'}
 ];
 const $ = id => document.getElementById(id);
 const money = value => new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(value);
