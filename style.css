@@ -1,0 +1,323 @@
+/* Basic page styling */
+body {
+    margin: 20px;
+    background-color: #f4f6f8;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+header {
+    padding: 15px;
+    background-color: #e5eef8;
+    text-align: center;
+    border: 1px solid #b7cbe0;
+    border-radius: 6px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+a {
+    color: #245a91;
+}
+
+main {
+    margin-top: 20px;
+}
+
+/* Product section */
+.layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#shop {
+    flex: 2;
+    min-width: 0;
+}
+
+#cart {
+    width: 420px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccd5df;
+    border-radius: 6px;
+    min-width: 260px;
+}
+
+.section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Search, category and sort inputs */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #bbc5cf;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #356da5;
+    color: white;
+    border: 1px solid #2b5e90;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #285682;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Simple product boxes */
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.product {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #d0d8e0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px #0000000d;
+}
+
+.product-art {
+    padding: 15px;
+    background-color: #f0f3f7;
+    border-radius: 4px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.product h3 {
+    font-size: 17px;
+}
+
+.product small {
+    color: #555555;
+}
+
+.product-bottom strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Cart items and quantity buttons */
+.cart-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.cart-icon {
+    font-size: 25px;
+}
+
+.cart-item h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.item-price {
+    font-size: 14px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.empty {
+    padding: 15px 0;
+    color: #555555;
+}
+
+/* Coupon form and price summary */
+#coupon-form {
+    margin-top: 20px;
+}
+
+.coupon-row {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.coupon-row input {
+    min-width: 0;
+}
+
+.hint {
+    color: #555555;
+    font-size: 13px;
+}
+
+dl div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+dd {
+    margin: 0;
+}
+
+.total {
+    padding-top: 10px;
+    border-top: 1px solid #999999;
+    font-weight: bold;
+}
+
+.full {
+    width: 100%;
+}
+
+/* Checkout window */
+dialog {
+    box-sizing: border-box;
+    width: 400px;
+    max-width: 95%;
+    max-height: 90vh;
+    padding: 20px;
+    border: 1px solid #aab9c9;
+    border-radius: 6px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+textarea {
+    min-height: 70px;
+}
+
+.checkout-total {
+    font-weight: bold;
+}
+
+/* Message shown after adding items or placing an order */
+#toast {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: #e5eef8;
+    border: 1px solid #aab9c9;
+    border-radius: 6px;
+}
+
+#toast.visible {
+    display: block;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    border-top: 1px solid #999999;
+    text-align: center;
+}
+
+/* Small finishing touches */
+h1,
+h2 {
+    color: #244d76;
+}
+
+.product-bottom strong {
+    color: #245a91;
+}
+
+.quantity button {
+    padding: 4px 9px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #356da5;
+    outline-offset: 2px;
+}
+
+footer {
+    color: #555555;
+    font-size: 14px;
+}
+
+/* Stack the sections on small screens */
+@media (max-width: 750px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    #shop {
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Product images are saved in the images folder. */
+.product-art img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+}
+
+.cart-image {
+    width: 60px;
+    height: 50px;
+    object-fit: contain;
+    border: 1px solid #d0d8e0;
+    border-radius: 4px;
+}
